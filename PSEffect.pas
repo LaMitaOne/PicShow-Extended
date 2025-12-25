@@ -2,7 +2,7 @@
 
 {Based on PicShow 4.20 by DelphiArea http://www.delphiarea.com/products/delphi-components/picshow/
 Original copyright: Mohammad Hossein Daneshpajouh
-Extended with 1 additional effect by Lara Miriam Tamy Reschke}
+Extended with 3 additional effects by Lara Miriam Tamy Reschke}
 
 
 {$I DELPHIAREA.INC}
@@ -198,7 +198,8 @@ procedure Effect174(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
 procedure Effect175(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
 procedure Effect176(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
 procedure Effect177(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
-
+procedure Effect178(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+procedure Effect179(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
 
 type
   TEffect = record
@@ -208,7 +209,7 @@ type
 
 const
   CustomEffectName = 'Custom';
-  PSEffects: array[1..177] of TEffect = (
+  PSEffects: array[1..179] of TEffect = (
     (Name: 'Expand from right';	                                        Proc: Effect001),
     (Name: 'Expand from left';	                                        Proc: Effect002),
     (Name: 'Slide in from right';	                                      Proc: Effect003),
@@ -385,8 +386,10 @@ const
     (Name: 'Slide out from left';                                       Proc: Effect174),
     (Name: 'Slide out from bottom';                                     Proc: Effect175),
     (Name: 'Slide out from top';                                        Proc: Effect176),
-    (Name: 'Neural Glitch Reveal';                                      Proc: Effect177)
-    );
+    (Name: 'Neural Glitch Reveal';                                      Proc: Effect177),
+    (Name: 'Radial clock wipe clockwise';                               Proc: Effect178),
+    (Name: 'Radial clock wipe counter-clockwise';                       Proc: Effect179)
+   );
 
 type
   PRGBQuadArray = ^TRGBQuadArray;
@@ -4311,7 +4314,47 @@ end;
 
 
 
+// Effect178: Radial clock wipe from center (clockwise)
+procedure Effect178(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+var
+  rgn: HRGN;
+  centerX, centerY: Integer;
+  angle: Extended;
+begin
+  centerX := W div 2;
+  centerY := H div 2;
+  angle := (Progress / 100) * 2 * Pi;  // Full circle over 0..100 progress
 
+  rgn := CreateRectRgn(0, 0, W, H);
+  try
+    CombineRgn(rgn, rgn, CreateSliceRgn(centerX, centerY, Max(W,H)*2, 0, angle, 64), RGN_AND);
+    SelectClipRgn(Display.Canvas.Handle, rgn);
+    BitBlt(Display.Canvas.Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+  finally
+    DeleteObject(rgn);
+  end;
+end;
+
+// Effect179: Radial clock wipe – counter-clockwise
+procedure Effect179(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+var
+  rgn: HRGN;
+  centerX, centerY: Integer;
+  angle: Extended;
+begin
+  centerX := W div 2;
+  centerY := H div 2;
+  angle := 2 * Pi - (Progress / 100) * 2 * Pi;  // Reverse direction
+
+  rgn := CreateRectRgn(0, 0, W, H);
+  try
+    CombineRgn(rgn, rgn, CreateSliceRgn(centerX, centerY, Max(W,H)*2, angle, 2*Pi, 64), RGN_AND);
+    SelectClipRgn(Display.Canvas.Handle, rgn);
+    BitBlt(Display.Canvas.Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+  finally
+    DeleteObject(rgn);
+  end;
+end;
 
 
 
