@@ -2,7 +2,7 @@
 
 {Based on PicShow 4.20 by DelphiArea http://www.delphiarea.com/products/delphi-components/picshow/
 Original copyright: Mohammad Hossein Daneshpajouh
-Extended with 13 additional effects by Lara Miriam Tamy Reschke – total 189 effects}
+Extended with 1 additional effect by Lara Miriam Tamy Reschke}
 
 
 {$I DELPHIAREA.INC}
@@ -198,18 +198,7 @@ procedure Effect174(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
 procedure Effect175(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
 procedure Effect176(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
 procedure Effect177(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
-procedure Effect178(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
-procedure Effect179(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
-procedure Effect180(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
-procedure Effect181(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
-procedure Effect182(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
-procedure Effect183(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
-procedure Effect184(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
-procedure Effect185(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
-procedure Effect186(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
-procedure Effect187(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
-procedure Effect188(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
-procedure Effect189(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+
 
 type
   TEffect = record
@@ -219,7 +208,7 @@ type
 
 const
   CustomEffectName = 'Custom';
-  PSEffects: array[1..189] of TEffect = (
+  PSEffects: array[1..177] of TEffect = (
     (Name: 'Expand from right';	                                        Proc: Effect001),
     (Name: 'Expand from left';	                                        Proc: Effect002),
     (Name: 'Slide in from right';	                                      Proc: Effect003),
@@ -396,20 +385,7 @@ const
     (Name: 'Slide out from left';                                       Proc: Effect174),
     (Name: 'Slide out from bottom';                                     Proc: Effect175),
     (Name: 'Slide out from top';                                        Proc: Effect176),
-
-    (Name: 'Neural Glitch Reveal';                                      Proc: Effect177),
-    (Name: 'Mosaic Explode';                                            Proc: Effect178),
-    (Name: 'Fractal Fade';                                              Proc: Effect179),
-    (Name: 'AI Sketch Draw';                                            Proc: Effect180),
-    (Name: 'Matrix Rain Reveal';                                        Proc: Effect181),
-    (Name: 'Wave Distortion Transition';                                Proc: Effect182),
-    (Name: 'Plasma Fade';                                               Proc: Effect183),
-    (Name: 'Hex Shred';                                                 Proc: Effect184),
-    (Name: 'Genetic Mutation Fade';                                     Proc: Effect185),
-    (Name: 'Hacker Terminal Reveal';                                    Proc: Effect186),
-    (Name: 'Quantum Shift Transition';                                  Proc: Effect187),
-    (Name: 'AI Doodle Morph';                                           Proc: Effect188),
-    (Name: 'Corrupted VHS Reveal';                                      Proc: Effect189)
+    (Name: 'Neural Glitch Reveal';                                      Proc: Effect177)
     );
 
 type
@@ -4316,12 +4292,12 @@ begin
       dstPixel^ := srcPixel^
     else
     begin
-      // Generiere zufällige Farben für Rot, Grün, Blau
-      R := Random(256);
-      G := Random(256);
-      B := Random(256);
+      // Generiere zufÃ¤llige Farben fÃ¼r Rot, GrÃ¼n, Blau
+      R := Random(40);
+      G := Random(40);
+      B := Random(40);
 
-      // Setze den Wert für dstPixel
+      // Setze den Wert fÃ¼r dstPixel
       dstPixel^[0] := R;  // R
       dstPixel^[1] := G;  // G
       dstPixel^[2] := B;  // B
@@ -4334,344 +4310,7 @@ begin
 end;
 
 
-procedure Effect178(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
-var
-  MosaicSize, i, j: Integer;
-  dstPixel, srcPixel: PRGBQuadChannles;
-begin
-  MosaicSize := 10 + (Progress div 10);  // Change mosaic size based on progress
-  srcPixel := Image.ScanLine[H - 1];
-  dstPixel := Display.ScanLine[H - 1];
-  
-  for i := 0 to H div MosaicSize do
-    for j := 0 to W div MosaicSize do
-    begin
-      if Progress < 100 then
-        dstPixel^ := srcPixel^
-      else
-        dstPixel^ := srcPixel^;
-      Inc(srcPixel, MosaicSize);
-      Inc(dstPixel, MosaicSize);
-    end;
-end;
 
-procedure Effect179(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
-var
-  I, J: Integer;
-  dstPixel, srcPixel: PRGBQuadChannles;
-begin
-  srcPixel := Image.ScanLine[H - 1];
-  dstPixel := Display.ScanLine[H - 1];
-
-  for I := 0 to H - 1 do
-    for J := 0 to W - 1 do
-    begin
-      dstPixel^ := srcPixel^;
-      Inc(srcPixel);
-      Inc(dstPixel);
-    end;
-  
-  // Apply fractal zoom (adjust based on progress)
-  if Progress < 100 then
-    // Modify pixels according to fractal pattern logic
-    // Placeholder for fractal manipulation logic
-end;
-
-procedure Effect180(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
-var
-  dstPixel, srcPixel: PRGBQuadChannles;
-  I, J: Integer;
-  R, G, B: Integer;
-begin
-  srcPixel := Image.ScanLine[H - 1];
-  dstPixel := Display.ScanLine[H - 1];
-
-  // Apply edge detection-like sketching for first few stages
-  for I := 0 to H - 1 do
-    for J := 0 to W - 1 do
-    begin
-      // Simuliere eine "Edge Detection" durch Farbumkehrung und Halbierung der Kanäle
-      R := 255 - (srcPixel^[0] shr 1);  // R (Rot) umkehren und halbieren
-      G := 255 - (srcPixel^[1] shr 1);  // G (Grün) umkehren und halbieren
-      B := 255 - (srcPixel^[2] shr 1);  // B (Blau) umkehren und halbieren
-
-      // Setze die neuen Werte in das Zielpixel
-      dstPixel^[0] := R;  // R
-      dstPixel^[1] := G;  // G
-      dstPixel^[2] := B;  // B
-      dstPixel^[3] := 255; // A (Alpha-Kanal auf 255 setzen, falls erforderlich)
-
-      Inc(srcPixel);
-      Inc(dstPixel);
-    end;
-end;
-
-
-
-procedure Effect181(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
-var
-  I, J: Integer;
-  dstPixel, srcPixel: PRGBQuadChannles;
-begin
-  srcPixel := Image.ScanLine[H - 1];
-  dstPixel := Display.ScanLine[H - 1];
-
-  for I := 0 to H - 1 do
-    for J := 0 to W - 1 do
-    begin
-      if Random(100) < Progress then
-      begin
-        // Übernehme den Originalwert
-        dstPixel^[0] := srcPixel^[0];
-        dstPixel^[1] := srcPixel^[1];
-        dstPixel^[2] := srcPixel^[2];
-        dstPixel^[3] := srcPixel^[3]; // Behalte den Alpha-Wert
-      end
-      else
-      begin
-        // Setze den Matrix-ähnlichen grünen Effekt
-        dstPixel^[0] := 0;      // R = 0
-        dstPixel^[1] := 255;    // G = 255
-        dstPixel^[2] := 0;      // B = 0
-        dstPixel^[3] := 255;    // Alpha = 255 (volle Deckkraft)
-      end;
-      Inc(srcPixel);
-      Inc(dstPixel);
-    end;
-end;
-
-
-
-procedure Effect182(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
-var
-  dstPixel, srcPixel: PRGBQuadChannles;
-  WaveShift: Integer;
-  I: Integer;
-begin
-  srcPixel := Image.ScanLine[H - 1];
-  dstPixel := Display.ScanLine[H - 1];
-
-  WaveShift := (Progress * 5) mod W;  // Wave shift based on progress
-  for I := 0 to W - 1 do
-  begin
-    if (I + WaveShift) mod W < (Progress * 10) then
-      dstPixel^[I] := srcPixel^[I];
-    Inc(srcPixel);
-    Inc(dstPixel);
-  end;
-end;
-
-
-procedure Effect183(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
-var
-  I: Integer;
-  dstPixel, srcPixel: PRGBQuadChannles;
-  R, G, B: Integer;
-begin
-  srcPixel := Image.ScanLine[H - 1];
-  dstPixel := Display.ScanLine[H - 1];
-
-  for I := 0 to (W * H) - 1 do
-  begin
-    // Erstelle zufällige RGB-Werte
-    R := Random(256);
-    G := Random(256);
-    B := Random(256);
-
-    // Weise die Werte den RGB-Kanälen zu
-    dstPixel^[0] := R;  // Rot
-    dstPixel^[1] := G;  // Grün
-    dstPixel^[2] := B;  // Blau
-    dstPixel^[3] := 255;  // Alpha auf 255 setzen (volle Deckkraft)
-
-    Inc(srcPixel);
-    Inc(dstPixel);
-  end;
-end;
-
-
-procedure Effect184(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
-var
-  HexSize, i, j: Integer;
-  dstPixel, srcPixel: PRGBQuadChannles;
-begin
-  HexSize := 10 + (Progress div 10);  // Change Hexagon size based on progress
-  srcPixel := Image.ScanLine[H - 1];
-  dstPixel := Display.ScanLine[H - 1];
-
-  for i := 0 to H div HexSize do
-    for j := 0 to W div HexSize do
-    begin
-      dstPixel^ := srcPixel^;
-      Inc(srcPixel, HexSize);
-      Inc(dstPixel, HexSize);
-    end;
-end;
-
-procedure Effect185(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
-var
-  dstPixel, srcPixel: PRGBQuadChannles;
-  I: Integer;
-  R, G, B: Integer;
-begin
-  srcPixel := Image.ScanLine[H - 1];
-  dstPixel := Display.ScanLine[H - 1];
-
-  for I := 0 to (W * H) - 1 do
-  begin
-    // Berechne zufällige Farbwerte
-    R := (srcPixel^[0] + Random(10)) mod 255;
-    G := (srcPixel^[1] + Random(10)) mod 255;
-    B := (srcPixel^[2] + Random(10)) mod 255;
-
-    // Weise die Farben den Kanälen zu
-    dstPixel^[0] := R;
-    dstPixel^[1] := G;
-    dstPixel^[2] := B;
-    dstPixel^[3] := 255; // Alpha auf 255 setzen
-
-    Inc(srcPixel);
-    Inc(dstPixel);
-  end;
-end;
-
-procedure Effect186(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
-var
-  dstPixel, srcPixel: PRGBQuadChannles;
-  I: Integer;
-  R, G, B: Integer;
-begin
-  srcPixel := Image.ScanLine[H - 1];
-  dstPixel := Display.ScanLine[H - 1];
-
-  for I := 0 to (W * H) - 1 do
-  begin
-    if Progress < 100 then
-    begin
-      // Erstelle zufällige RGB-Werte
-      R := Random(256);
-      G := Random(256);
-      B := Random(256);
-    end
-    else
-    begin
-      // Verwende den Originalwert
-      R := srcPixel^[0];
-      G := srcPixel^[1];
-      B := srcPixel^[2];
-    end;
-
-    // Weise die RGB-Werte den Kanälen zu
-    dstPixel^[0] := R;
-    dstPixel^[1] := G;
-    dstPixel^[2] := B;
-    dstPixel^[3] := 255; // Alpha auf 255 setzen
-
-    Inc(srcPixel);
-    Inc(dstPixel);
-  end;
-end;
-
-procedure Effect187(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
-var
-  dstPixel, srcPixel: PRGBQuadChannles;
-  I: Integer;
-  R, G, B: Integer;
-begin
-  srcPixel := Image.ScanLine[H - 1];
-  dstPixel := Display.ScanLine[H - 1];
-
-  for I := 0 to (W * H) - 1 do
-  begin
-    if Random(100) < Progress then
-    begin
-      // Verwende den Originalwert
-      R := srcPixel^[0];
-      G := srcPixel^[1];
-      B := srcPixel^[2];
-    end
-    else
-    begin
-      // Erstelle zufällige RGB-Werte
-      R := Random(256);
-      G := Random(256);
-      B := Random(256);
-    end;
-
-    // Weise die RGB-Werte den Kanälen zu
-    dstPixel^[0] := R;
-    dstPixel^[1] := G;
-    dstPixel^[2] := B;
-    dstPixel^[3] := 255; // Alpha auf 255 setzen
-
-    Inc(srcPixel);
-    Inc(dstPixel);
-  end;
-end;
-
-procedure Effect188(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
-var
-  dstPixel, srcPixel: PRGBQuadChannles;
-  I: Integer;
-  R, G, B: Integer;
-begin
-  srcPixel := Image.ScanLine[H - 1];
-  dstPixel := Display.ScanLine[H - 1];
-
-  for I := 0 to (W * H) - 1 do
-  begin
-    // Erstelle zufällige RGB-Werte (doodle art style)
-    R := Random(256);
-    G := Random(256);
-    B := Random(256);
-
-    // Weise die RGB-Werte den Kanälen zu
-    dstPixel^[0] := R;
-    dstPixel^[1] := G;
-    dstPixel^[2] := B;
-    dstPixel^[3] := 255; // Alpha auf 255 setzen
-
-    Inc(srcPixel);
-    Inc(dstPixel);
-  end;
-end;
-
-procedure Effect189(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
-var
-  dstPixel, srcPixel: PRGBQuadChannles;
-  I: Integer;
-  R, G, B: Integer;
-begin
-  srcPixel := Image.ScanLine[H - 1];
-  dstPixel := Display.ScanLine[H - 1];
-
-  for I := 0 to (W * H) - 1 do
-  begin
-    if Random(100) < Progress then
-    begin
-      // Erstelle zufällige RGB-Werte für VHS-Rauschen
-      R := Random(255);
-      G := Random(255);
-      B := Random(255);
-    end
-    else
-    begin
-      // Verwende den Originalwert
-      R := srcPixel^[0];
-      G := srcPixel^[1];
-      B := srcPixel^[2];
-    end;
-
-    // Weise die RGB-Werte den Kanälen zu
-    dstPixel^[0] := R;
-    dstPixel^[1] := G;
-    dstPixel^[2] := B;
-    dstPixel^[3] := 255; // Alpha auf 255 setzen
-
-    Inc(srcPixel);
-    Inc(dstPixel);
-  end;
-end;
 
 
 
