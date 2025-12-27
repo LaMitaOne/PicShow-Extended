@@ -1,12 +1,9 @@
-{------------------------------------------------------------------------------}
-{                                                                              }
-{  PicShow v4.20                                                               }
-{  by Kambiz R. Khojasteh                                                      }
-{                                                                              }
-{  kambiz@delphiarea.com                                                       }
-{  http://www.delphiarea.com                                                   }
-{                                                                              }
-{------------------------------------------------------------------------------}
+{ TPicshow 4.21}
+
+{Based on PicShow 4.20 by DelphiArea http://www.delphiarea.com/products/delphi-components/picshow/
+Original copyright: Mohammad Hossein Daneshpajouh
+Extended with 39 additional effects by Lara Miriam Tamy Reschke}
+
 
 {$I DELPHIAREA.INC}
 
@@ -236,3 +233,4 @@ begin
 end;
 
 end.
+
