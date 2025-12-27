@@ -8,6 +8,8 @@ This library is based on **PicShow 4.20** by Mohammad Hossein Daneshpajouh (Delp
 I simply added **39 new transition effects** – that's it.  
 The new effects are integrated into the existing code structure.    
    
+Basic sample exe included   
+   
 ### Original   
 - Author: Mohammad Hossein Daneshpajouh    
 - Original Website: https://www.delphiarea.com/products/delphi-components/picshow/  
