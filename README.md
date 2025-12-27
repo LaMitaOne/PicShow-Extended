@@ -1,5 +1,5 @@
 # PicShow-Extended
-Extended version of the popular Delphi PicShow component with a total of 179 transition effects (original had 176).     
+Extended version of the popular Delphi PicShow component with a total of 215 transition effects (original had 176).     
         
 ## About This Project    
     
