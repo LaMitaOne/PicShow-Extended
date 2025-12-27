@@ -2,7 +2,7 @@
 
 {Based on PicShow 4.20 by DelphiArea http://www.delphiarea.com/products/delphi-components/picshow/
 Original copyright: Mohammad Hossein Daneshpajouh
-Extended with 3 additional effects by Lara Miriam Tamy Reschke}
+Extended with 39 additional effects by Lara Miriam Tamy Reschke}
 
 
 {$I DELPHIAREA.INC}
@@ -200,6 +200,42 @@ procedure Effect176(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
 procedure Effect177(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
 procedure Effect178(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
 procedure Effect179(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+procedure Effect180(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+procedure Effect181(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+procedure Effect182(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+procedure Effect183(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+procedure Effect184(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+procedure Effect185(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+procedure Effect186(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+procedure Effect187(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+procedure Effect188(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+procedure Effect189(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+procedure Effect190(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+procedure Effect191(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+procedure Effect192(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+procedure Effect193(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+procedure Effect194(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+procedure Effect195(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+procedure Effect196(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+procedure Effect197(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+procedure Effect198(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+procedure Effect199(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+procedure Effect200(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+procedure Effect201(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+procedure Effect202(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+procedure Effect203(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+procedure Effect204(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+procedure Effect205(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+procedure Effect206(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+procedure Effect207(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+procedure Effect208(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+procedure Effect209(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+procedure Effect210(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+procedure Effect211(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+procedure Effect212(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+procedure Effect213(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+procedure Effect214(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+procedure Effect215(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
 
 type
   TEffect = record
@@ -209,7 +245,7 @@ type
 
 const
   CustomEffectName = 'Custom';
-  PSEffects: array[1..179] of TEffect = (
+  PSEffects: array[1..215] of TEffect = (
     (Name: 'Expand from right';	                                        Proc: Effect001),
     (Name: 'Expand from left';	                                        Proc: Effect002),
     (Name: 'Slide in from right';	                                      Proc: Effect003),
@@ -388,7 +424,43 @@ const
     (Name: 'Slide out from top';                                        Proc: Effect176),
     (Name: 'Neural Glitch Reveal';                                      Proc: Effect177),
     (Name: 'Radial clock wipe clockwise';                               Proc: Effect178),
-    (Name: 'Radial clock wipe counter-clockwise';                       Proc: Effect179)
+    (Name: 'Radial clock wipe counter-clockwise';                       Proc: Effect179),
+    (Name: 'Random Circles';                                            Proc: Effect180),
+    (Name: 'Iris Circle Out';                                           Proc: Effect181),
+    (Name: 'Iris Circle In';                                            Proc: Effect182),
+    (Name: 'Split Reveal Vertical';                                     Proc: Effect183),
+    (Name: 'Split Reveal Horizontal';                                   Proc: Effect184),
+    (Name: 'Parallelogram Wipe';                                        Proc: Effect185),
+    (Name: 'Heart Reveal';                                              Proc: Effect186),
+    (Name: 'Squeeze Vertical';                                           Proc: Effect187),
+    (Name: 'Squeeze Horizontal';                                         Proc: Effect188),
+    (Name: 'Barn Door Vertical';                                         Proc: Effect189),
+    (Name: 'Barn Door Horizontal';                                       Proc: Effect190),
+    (Name: 'Double Iris';                                                Proc: Effect191),
+    (Name: 'Hexagon Reveal';                                            Proc: Effect192),
+    (Name: 'Checkerboard Random';                                       Proc: Effect193),
+    (Name: 'Rubber Eraser';                                             Proc: Effect194),
+    (Name: 'Interlaced Bars';                                           Proc: Effect195),
+    (Name: 'Ripple';                                                     Proc: Effect196),
+    (Name: 'Pinwheel';                                                   Proc: Effect197),
+    (Name: 'Vertical Shred';                                             Proc: Effect198),
+    (Name: 'Radar Sweep';                                                Proc: Effect199),
+    (Name: 'Box Out';                                                   Proc: Effect200),
+    (Name: 'Box In';                                                    Proc: Effect201),
+    (Name: 'Spiral Out';                                                Proc: Effect202),
+    (Name: 'Starburst';                                                  Proc: Effect203),
+    (Name: 'Horizontal Shredder';                                        Proc: Effect204),
+    (Name: 'Vertical Shredder';                                          Proc: Effect205),
+    (Name: 'Grid Expansion';                                             Proc: Effect206),
+    (Name: 'Thick Diagonal Wipe';                                       Proc: Effect207),
+    (Name: 'Box Iris';                                                   Proc: Effect208),
+    (Name: 'Waterfall';                                                  Proc: Effect209),
+    (Name: 'Laser Scan';                                                 Proc: Effect210),
+    (Name: 'Wave';                                                       Proc: Effect211),
+    (Name: 'Random Mosaic';                                              Proc: Effect212),
+    (Name: 'Corner Slide';                                               Proc: Effect213),
+    (Name: 'Circle Pulse';                                               Proc: Effect214),
+    (Name: 'Vertical Block Slide';                                        Proc: Effect215)
    );
 
 type
@@ -4324,7 +4396,6 @@ begin
   centerX := W div 2;
   centerY := H div 2;
   angle := (Progress / 100) * 2 * Pi;  // Full circle over 0..100 progress
-
   rgn := CreateRectRgn(0, 0, W, H);
   try
     CombineRgn(rgn, rgn, CreateSliceRgn(centerX, centerY, Max(W,H)*2, 0, angle, 64), RGN_AND);
@@ -4334,7 +4405,6 @@ begin
     DeleteObject(rgn);
   end;
 end;
-
 // Effect179: Radial clock wipe – counter-clockwise
 procedure Effect179(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
 var
@@ -4345,7 +4415,6 @@ begin
   centerX := W div 2;
   centerY := H div 2;
   angle := 2 * Pi - (Progress / 100) * 2 * Pi;  // Reverse direction
-
   rgn := CreateRectRgn(0, 0, W, H);
   try
     CombineRgn(rgn, rgn, CreateSliceRgn(centerX, centerY, Max(W,H)*2, angle, 2*Pi, 64), RGN_AND);
@@ -4355,6 +4424,1521 @@ begin
     DeleteObject(rgn);
   end;
 end;
+
+
+// Effect180: Random Circles Reveal
+procedure Effect180(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+var
+  GridSize: Integer;
+  cX, cY: Integer;
+  Rgn, TmpRgn: HRGN;
+  SavedRandSeed: Integer;
+begin
+  if Progress > 98 then
+  begin
+    BitBlt(Display.Canvas.Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+    Exit;
+  end;
+
+  SavedRandSeed := RandSeed;
+  RandSeed := Integer(Image.Handle);
+  GridSize := Max(W, H) div 10;
+  if GridSize < 20 then GridSize := 20;
+  Rgn := 0;
+
+  for cX := -1 to (W div GridSize) + 1 do
+    for cY := -1 to (H div GridSize) + 1 do
+      if (Random(100) < Progress) or (Progress > 80) then
+      begin
+        TmpRgn := CreateEllipticRgn(cX * GridSize, cY * GridSize, (cX + 1) * GridSize, (cY + 1) * GridSize);
+        if Rgn = 0 then
+          Rgn := TmpRgn
+        else
+        begin
+          CombineRgn(Rgn, Rgn, TmpRgn, RGN_OR);
+          DeleteObject(TmpRgn);
+        end;
+      end;
+
+  RandSeed := SavedRandSeed;
+  if Rgn <> 0 then
+    try
+      with Display.Canvas do
+      begin
+        SelectClipRgn(Handle, Rgn);
+        BitBlt(Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+        SelectClipRgn(Handle, 0);
+      end;
+    finally
+      DeleteObject(Rgn);
+    end;
+end;
+
+// Effect181: Iris Circle Out
+procedure Effect181(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+var
+  rgn: HRGN;
+  cx, cy, radX, radY: Integer;
+begin
+  if Progress > 98 then
+  begin
+    BitBlt(Display.Canvas.Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+    Exit;
+  end;
+
+  cx := W div 2;
+  cy := H div 2;
+  radX := MulDiv(W div 2, Progress, 100);
+  radY := MulDiv(H div 2, Progress, 100);
+
+  rgn := CreateEllipticRgn(cx - radX, cy - radY, cx + radX + 1, cy + radY + 1);
+  try
+    with Display.Canvas do
+    begin
+      SelectClipRgn(Handle, rgn);
+      BitBlt(Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+      SelectClipRgn(Handle, 0);
+    end;
+  finally
+    DeleteObject(rgn);
+  end;
+end;
+
+// Effect182: Iris Circle In
+procedure Effect182(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+var
+  rgn, rgnFull, rgnHole: HRGN;
+  cx, cy, radX, radY: Integer;
+begin
+  if Progress > 98 then
+  begin
+    BitBlt(Display.Canvas.Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+    Exit;
+  end;
+
+  cx := W div 2;
+  cy := H div 2;
+  radX := MulDiv(W div 2, 100 - Progress, 100);
+  radY := MulDiv(H div 2, 100 - Progress, 100);
+
+  rgnFull := CreateRectRgn(0, 0, W, H);
+  if (radX > 2) and (radY > 2) then
+  begin
+    rgnHole := CreateEllipticRgn(cx - radX, cy - radY, cx + radX + 1, cy + radY + 1);
+    rgn := CreateRectRgn(0, 0, 0, 0);
+    CombineRgn(rgn, rgnFull, rgnHole, RGN_DIFF);
+    DeleteObject(rgnHole);
+  end
+  else
+    rgn := rgnFull;
+
+  try
+    with Display.Canvas do
+    begin
+      SelectClipRgn(Handle, rgn);
+      BitBlt(Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+      SelectClipRgn(Handle, 0);
+    end;
+  finally
+    DeleteObject(rgn);
+  end;
+end;
+
+// Effect183: Split Reveal Vertical
+procedure Effect183(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+var
+  rgn, rgn1, rgn2: HRGN;
+  SplitX: Integer;
+begin
+  if Progress > 98 then
+  begin
+    BitBlt(Display.Canvas.Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+    Exit;
+  end;
+
+  SplitX := MulDiv(W, Progress, 200);
+  rgn1 := CreateRectRgn(0, 0, SplitX, H);
+  rgn2 := CreateRectRgn(W - SplitX, 0, W, H);
+  rgn := CreateRectRgn(0, 0, 0, 0);
+  CombineRgn(rgn, rgn1, rgn2, RGN_OR);
+  DeleteObject(rgn1);
+  DeleteObject(rgn2);
+
+  try
+    with Display.Canvas do
+    begin
+      SelectClipRgn(Handle, rgn);
+      BitBlt(Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+      SelectClipRgn(Handle, 0);
+    end;
+  finally
+    DeleteObject(rgn);
+  end;
+end;
+
+// Effect184: Split Reveal Horizontal
+procedure Effect184(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+var
+  rgn, rgn1, rgn2: HRGN;
+  SplitY: Integer;
+begin
+  if Progress > 98 then
+  begin
+    BitBlt(Display.Canvas.Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+    Exit;
+  end;
+
+  SplitY := MulDiv(H, Progress, 200);
+  rgn1 := CreateRectRgn(0, 0, W, SplitY);
+  rgn2 := CreateRectRgn(0, H - SplitY, W, H);
+  rgn := CreateRectRgn(0, 0, 0, 0);
+  CombineRgn(rgn, rgn1, rgn2, RGN_OR);
+  DeleteObject(rgn1);
+  DeleteObject(rgn2);
+
+  try
+    with Display.Canvas do
+    begin
+      SelectClipRgn(Handle, rgn);
+      BitBlt(Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+      SelectClipRgn(Handle, 0);
+    end;
+  finally
+    DeleteObject(rgn);
+  end;
+end;
+
+// Effect185: Parallelogram Wipe
+procedure Effect185(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+var
+  rgn: HRGN;
+  Step: Integer;
+  pts: array[1..4] of TPoint;
+begin
+  if Progress > 98 then
+  begin
+    BitBlt(Display.Canvas.Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+    Exit;
+  end;
+
+  Step := MulDiv(W + 100, Progress, 100);
+  if Step = 0 then Exit;
+
+  pts[1].X := 0; pts[1].Y := -50;
+  pts[2].X := Step; pts[2].Y := (H div 3) - 50;
+  pts[3].X := Step; pts[3].Y := H + (H div 3);
+  pts[4].X := 0; pts[4].Y := H + 50;
+
+  rgn := CreatePolygonRgn(pts, 4, WINDING);
+  try
+    with Display.Canvas do
+    begin
+      SelectClipRgn(Handle, rgn);
+      BitBlt(Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+      SelectClipRgn(Handle, 0);
+    end;
+  finally
+    DeleteObject(rgn);
+  end;
+end;
+
+// Effect186: Heart Reveal (Renumbered from 188)
+procedure Effect186(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+var
+  pts: array[0..100] of TPoint;
+  i, cnt: Integer;
+  a: Extended;
+  Scale, cx, cy: Integer;
+  rgn: HRGN;
+begin
+  if Progress > 98 then
+  begin
+    BitBlt(Display.Canvas.Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+    Exit;
+  end;
+
+  cx := W div 2;
+  cy := H div 2;
+  // Linear scaling
+  Scale := MulDiv(Min(W, H), Progress, 140);
+
+  cnt := 0;
+  for i := 0 to 100 do
+  begin
+    a := (PI * 2 * i) / 100;
+    pts[cnt].X := cx + Round(Scale * 16 * Power(Sin(a), 3));
+    pts[cnt].Y := cy - Round(Scale * (13 * Cos(a) - 5 * Cos(2*a) - 2 * Cos(3*a) - Cos(4*a)));
+    Inc(cnt);
+  end;
+
+  rgn := CreatePolygonRgn(pts, cnt, WINDING);
+  try
+    with Display.Canvas do
+    begin
+      SelectClipRgn(Handle, rgn);
+      BitBlt(Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+      SelectClipRgn(Handle, 0);
+    end;
+  finally
+    DeleteObject(rgn);
+  end;
+end;
+
+// Effect187: Squeeze Vertical (Renumbered from 189)
+procedure Effect187(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+var
+  rgn: HRGN;
+  WidthX: Integer;
+begin
+  if Progress > 98 then
+  begin
+    BitBlt(Display.Canvas.Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+    Exit;
+  end;
+
+  WidthX := MulDiv(W, Progress, 100);
+  if WidthX < 1 then WidthX := 1;
+  rgn := CreateRectRgn((W - WidthX) div 2, 0, (W + WidthX) div 2, H);
+  try
+    with Display.Canvas do
+    begin
+      SelectClipRgn(Handle, rgn);
+      BitBlt(Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+      SelectClipRgn(Handle, 0);
+    end;
+  finally
+    DeleteObject(rgn);
+  end;
+end;
+
+// Effect188: Squeeze Horizontal (Renumbered from 190)
+procedure Effect188(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+var
+  rgn: HRGN;
+  HeightY: Integer;
+begin
+  if Progress > 98 then
+  begin
+    BitBlt(Display.Canvas.Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+    Exit;
+  end;
+
+  HeightY := MulDiv(H, Progress, 100);
+  if HeightY < 1 then HeightY := 1;
+  rgn := CreateRectRgn(0, (H - HeightY) div 2, W, (H + HeightY) div 2);
+  try
+    with Display.Canvas do
+    begin
+      SelectClipRgn(Handle, rgn);
+      BitBlt(Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+      SelectClipRgn(Handle, 0);
+    end;
+  finally
+    DeleteObject(rgn);
+  end;
+end;
+
+// Effect189: Barn Door Vertical (Renumbered from 191)
+procedure Effect189(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+var
+  rgn, rgn1, rgn2: HRGN;
+  DoorWidth: Integer;
+begin
+  if Progress > 98 then
+  begin
+    BitBlt(Display.Canvas.Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+    Exit;
+  end;
+
+  DoorWidth := MulDiv(W div 2, Progress, 100);
+  rgn1 := CreateRectRgn((W div 2) - DoorWidth, 0, W div 2, H);
+  rgn2 := CreateRectRgn(W div 2, 0, (W div 2) + DoorWidth, H);
+  rgn := CreateRectRgn(0,0,0,0);
+  CombineRgn(rgn, rgn1, rgn2, RGN_OR);
+  DeleteObject(rgn1);
+  DeleteObject(rgn2);
+  try
+    with Display.Canvas do
+    begin
+      SelectClipRgn(Handle, rgn);
+      BitBlt(Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+      SelectClipRgn(Handle, 0);
+    end;
+  finally
+    DeleteObject(rgn);
+  end;
+end;
+
+// Effect190: Barn Door Horizontal (Renumbered from 192)
+procedure Effect190(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+var
+  rgn, rgn1, rgn2: HRGN;
+  DoorHeight: Integer;
+begin
+  if Progress > 98 then
+  begin
+    BitBlt(Display.Canvas.Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+    Exit;
+  end;
+
+  DoorHeight := MulDiv(H div 2, Progress, 100);
+  rgn1 := CreateRectRgn(0, (H div 2) - DoorHeight, W, H div 2);
+  rgn2 := CreateRectRgn(0, H div 2, W, (H div 2) + DoorHeight);
+  rgn := CreateRectRgn(0,0,0,0);
+  CombineRgn(rgn, rgn1, rgn2, RGN_OR);
+  DeleteObject(rgn1);
+  DeleteObject(rgn2);
+  try
+    with Display.Canvas do
+    begin
+      SelectClipRgn(Handle, rgn);
+      BitBlt(Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+      SelectClipRgn(Handle, 0);
+    end;
+  finally
+    DeleteObject(rgn);
+  end;
+end;
+
+// Effect191: Double Iris (Renumbered from 193)
+procedure Effect191(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+var
+  rgn, rgn1, rgn2: HRGN;
+  cx, cy, radX, radY: Integer;
+begin
+  if Progress > 98 then
+  begin
+    BitBlt(Display.Canvas.Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+    Exit;
+  end;
+
+  cx := W div 2;
+  cy := H div 2;
+  radX := MulDiv(W div 2, Progress, 100);
+  radY := MulDiv(H, Progress, 100);
+
+  rgn1 := CreateEllipticRgn(cx - radX - 20, cy - radY, cx - 20, cy + radY);
+  rgn2 := CreateEllipticRgn(cx + 20, cy - radY, cx + radX + 20, cy + radY);
+  rgn := CreateRectRgn(0,0,0,0);
+  CombineRgn(rgn, rgn1, rgn2, RGN_OR);
+  DeleteObject(rgn1);
+  DeleteObject(rgn2);
+
+  try
+    with Display.Canvas do
+    begin
+      SelectClipRgn(Handle, rgn);
+      BitBlt(Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+      SelectClipRgn(Handle, 0);
+    end;
+  finally
+    DeleteObject(rgn);
+  end;
+end;
+
+// Effect192: Hexagon Reveal (Renumbered from 194)
+procedure Effect192(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+var
+  rgn: HRGN;
+  pts: array[0..5] of TPoint;
+  i, angle: Integer;
+  cx, cy, rad: Integer;
+  aRad: Extended;
+begin
+  if Progress > 98 then
+  begin
+    BitBlt(Display.Canvas.Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+    Exit;
+  end;
+
+  cx := W div 2;
+  cy := H div 2;
+  rad := Round(Sqrt(W*W + H*H) * (Progress / 200));
+
+  for i := 0 to 5 do
+  begin
+    angle := i * 60;
+    aRad := DegToRad(angle);
+    pts[i].X := cx + Round(rad * Cos(aRad));
+    pts[i].Y := cy + Round(rad * Sin(aRad));
+  end;
+
+  rgn := CreatePolygonRgn(pts, 6, WINDING);
+  try
+    with Display.Canvas do
+    begin
+      SelectClipRgn(Handle, rgn);
+      BitBlt(Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+      SelectClipRgn(Handle, 0);
+    end;
+  finally
+    DeleteObject(rgn);
+  end;
+end;
+
+// Effect193: Checkerboard Random (Renumbered from 195)
+procedure Effect193(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+var
+  GridSize, cX, cY: Integer;
+  rgn, rgnTmp: HRGN;
+  SavedRandSeed: Integer;
+  TotalCells, CellsToReveal, CellsRevealed: Integer;
+begin
+  if Progress > 98 then
+  begin
+    BitBlt(Display.Canvas.Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+    Exit;
+  end;
+
+  SavedRandSeed := RandSeed;
+  RandSeed := Integer(Image.Handle);
+  GridSize := Max(W, H) div 10;
+  if GridSize < 20 then GridSize := 20;
+  rgn := 0;
+
+  TotalCells := ((W div GridSize) + 2) * ((H div GridSize) + 2);
+  CellsToReveal := MulDiv(TotalCells, Progress, 100);
+  CellsRevealed := 0;
+
+  for cX := -1 to (W div GridSize) + 1 do
+    for cY := -1 to (H div GridSize) + 1 do
+      if (cX + cY) mod 2 = 0 then
+      begin
+        if (CellsRevealed < CellsToReveal) then
+        begin
+          rgnTmp := CreateRectRgn(cX * GridSize, cY * GridSize, (cX+1)*GridSize, (cY+1)*GridSize);
+          if rgn = 0 then
+            rgn := rgnTmp
+          else
+          begin
+            CombineRgn(rgn, rgn, rgnTmp, RGN_OR);
+            DeleteObject(rgnTmp);
+          end;
+          Inc(CellsRevealed);
+        end;
+      end;
+
+  RandSeed := SavedRandSeed;
+
+  if rgn <> 0 then
+    try
+      with Display.Canvas do
+      begin
+        SelectClipRgn(Handle, rgn);
+        BitBlt(Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+        SelectClipRgn(Handle, 0);
+      end;
+    finally
+      DeleteObject(rgn);
+    end;
+end;
+
+// Effect194: Rubber Eraser (Renumbered from 196)
+procedure Effect194(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+var
+  GridSize: Integer;
+  cX, cY: Integer;
+  Rgn, TmpRgn: HRGN;
+  SavedRandSeed: Integer;
+  TotalCells, CellsToReveal: Integer;
+begin
+  if Progress > 98 then
+  begin
+    BitBlt(Display.Canvas.Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+    Exit;
+  end;
+
+  SavedRandSeed := RandSeed;
+  RandSeed := Integer(Image.Handle);
+  GridSize := Max(W, H) div 15;
+  if GridSize < 20 then GridSize := 20;
+  Rgn := 0;
+
+  TotalCells := ((W div GridSize) + 2) * ((H div GridSize) + 2);
+  CellsToReveal := MulDiv(TotalCells, Progress, 100);
+
+  for cX := 0 to CellsToReveal do
+  begin
+    TmpRgn := CreateEllipticRgn(
+      Random(W) - GridSize, Random(H) - GridSize,
+      Random(W) + GridSize, Random(H) + GridSize
+    );
+    if Rgn = 0 then
+      Rgn := TmpRgn
+    else
+    begin
+      CombineRgn(Rgn, Rgn, TmpRgn, RGN_OR);
+      DeleteObject(TmpRgn);
+    end;
+  end;
+
+  RandSeed := SavedRandSeed;
+
+  if Rgn <> 0 then
+    try
+      with Display.Canvas do
+      begin
+        SelectClipRgn(Handle, Rgn);
+        BitBlt(Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+        SelectClipRgn(Handle, 0);
+      end;
+    finally
+      DeleteObject(Rgn);
+    end;
+end;
+
+// Effect195: Interlaced Bars (Renumbered from 197)
+procedure Effect195(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+var
+  StripHeight, OffsetY, cY: Integer;
+  Rgn, TmpRgn: HRGN;
+begin
+  if Progress > 98 then
+  begin
+    BitBlt(Display.Canvas.Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+    Exit;
+  end;
+
+  StripHeight := 30;
+  OffsetY := MulDiv(StripHeight, Progress, 100);
+  Rgn := 0;
+
+  for cY := -StripHeight to H + StripHeight do
+  begin
+    if ((cY div StripHeight) mod 2 = 0) then
+      TmpRgn := CreateRectRgn(0, cY, W, cY + OffsetY)
+    else
+      TmpRgn := CreateRectRgn(0, cY + StripHeight - OffsetY, W, cY + StripHeight);
+
+    if Rgn = 0 then
+      Rgn := TmpRgn
+    else
+    begin
+      CombineRgn(Rgn, Rgn, TmpRgn, RGN_OR);
+      DeleteObject(TmpRgn);
+    end;
+  end;
+
+  try
+    with Display.Canvas do
+    begin
+      SelectClipRgn(Handle, Rgn);
+      BitBlt(Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+      SelectClipRgn(Handle, 0);
+    end;
+  finally
+    DeleteObject(Rgn);
+  end;
+end;
+
+// Effect196: Ripple (Renumbered from 198)
+procedure Effect196(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+var
+  cx, cy, i, Radius, MaxRadius: Integer;
+  Rgn, TmpRgn: HRGN;
+begin
+  if Progress > 98 then
+  begin
+    BitBlt(Display.Canvas.Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+    Exit;
+  end;
+
+  cx := W div 2;
+  cy := H div 2;
+  MaxRadius := Round(Sqrt(W*W + H*H) / 2);
+  Radius := MulDiv(MaxRadius, Progress, 100);
+  Rgn := 0;
+
+  i := 0;
+  while i < Radius do
+  begin
+    if (i div 30) mod 2 = 0 then
+    begin
+      TmpRgn := CreateEllipticRgn(cx - i, cy - i, cx + i, cy + i);
+      if Rgn = 0 then
+        Rgn := TmpRgn
+      else
+      begin
+        CombineRgn(Rgn, Rgn, TmpRgn, RGN_OR);
+        DeleteObject(TmpRgn);
+      end;
+    end;
+    Inc(i);
+  end;
+
+  if Rgn <> 0 then
+    try
+      with Display.Canvas do
+      begin
+        SelectClipRgn(Handle, Rgn);
+        BitBlt(Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+        SelectClipRgn(Handle, 0);
+      end;
+    finally
+      DeleteObject(Rgn);
+    end;
+end;
+
+// Effect197: Pinwheel (Fixed: Sweeps the area clean)
+procedure Effect197(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+var
+  cx, cy: Integer;
+  StartAngle, EndAngle: Extended;
+  Rgn, Tmp: HRGN;
+begin
+  if Progress > 98 then
+  begin
+    BitBlt(Display.Canvas.Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+    Exit;
+  end;
+
+  cx := W div 2;
+  cy := H div 2;
+  StartAngle := 0;
+  EndAngle := (Progress / 100) * 2 * PI; // Full sweep based on progress
+  Rgn := 0;
+
+  // Create two sweeps (opposing propellers) to fill screen nicely
+  Tmp := CreateSliceRgn(cx, cy, Max(W,H), StartAngle, EndAngle, 32);
+  Rgn := Tmp;
+
+  Tmp := CreateSliceRgn(cx, cy, Max(W,H), StartAngle + PI, EndAngle + PI, 32);
+  CombineRgn(Rgn, Rgn, Tmp, RGN_OR);
+  DeleteObject(Tmp);
+
+  try
+    with Display.Canvas do
+    begin
+      SelectClipRgn(Handle, Rgn);
+      BitBlt(Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+      SelectClipRgn(Handle, 0);
+    end;
+  finally
+    DeleteObject(Rgn);
+  end;
+end;
+
+// Effect198: Vertical Shred (Renumbered from 200)
+procedure Effect198(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+var
+  cX, StripWidth: Integer;
+  Offset, RandOffset: Integer;
+  Rgn, TmpRgn: HRGN;
+  SavedRandSeed: Integer;
+begin
+  if Progress > 98 then
+  begin
+    BitBlt(Display.Canvas.Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+    Exit;
+  end;
+
+  SavedRandSeed := RandSeed;
+  RandSeed := Integer(Image.Handle);
+  StripWidth := 20;
+  Offset := MulDiv(H, Progress, 100);
+  Rgn := 0;
+
+  for cX := 0 to W div StripWidth + 1 do
+  begin
+    RandOffset := Random(StripWidth * 2);
+    TmpRgn := CreateRectRgn(cX * StripWidth, 0, (cX+1) * StripWidth, Offset + RandOffset);
+    if Rgn = 0 then
+      Rgn := TmpRgn
+    else
+    begin
+      CombineRgn(Rgn, Rgn, TmpRgn, RGN_OR);
+      DeleteObject(TmpRgn);
+    end;
+  end;
+
+  RandSeed := SavedRandSeed;
+
+  if Rgn <> 0 then
+    try
+      with Display.Canvas do
+      begin
+        SelectClipRgn(Handle, Rgn);
+        BitBlt(Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+        SelectClipRgn(Handle, 0);
+      end;
+    finally
+      DeleteObject(Rgn);
+    end;
+end;
+
+// Effect199: Radar Sweep (Fixed: Reveals the swept area)
+procedure Effect199(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+var
+  cx, cy: Integer;
+  Angle: Extended;
+  Rgn: HRGN;
+begin
+  if Progress > 98 then
+  begin
+    BitBlt(Display.Canvas.Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+    Exit;
+  end;
+
+  cx := W div 2;
+  cy := H div 2;
+  Angle := (Progress / 100) * 2 * PI;
+
+  // Use Slice helper to create the swept region
+  Rgn := CreateSliceRgn(cx, cy, Round(Sqrt(W*W + H*H) / 2), 0, Angle, 32);
+
+  try
+    with Display.Canvas do
+    begin
+      SelectClipRgn(Handle, Rgn);
+      BitBlt(Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+      SelectClipRgn(Handle, 0);
+    end;
+  finally
+    DeleteObject(Rgn);
+  end;
+end;
+
+// Effect200: Box Out (Corners reveal)
+procedure Effect200(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+var
+  Rgn, Tmp: HRGN;
+  X1, X2, Y1, Y2: Integer;
+begin
+  if Progress > 98 then
+  begin
+    BitBlt(Display.Canvas.Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+    Exit;
+  end;
+
+  X1 := MulDiv(W, Progress, 100);
+  Y1 := MulDiv(H, Progress, 100);
+  X2 := W - X1;
+  Y2 := H - Y1;
+
+  Rgn := 0;
+  Tmp := CreatePolygonRgnEx([0,0, X1,0, 0,Y1]); if Rgn=0 then Rgn:=Tmp else begin CombineRgn(Rgn,Rgn,Tmp,RGN_OR); DeleteObject(Tmp); end; // TL
+  Tmp := CreatePolygonRgnEx([W,0, W,Y1, X2,0]); if Rgn=0 then Rgn:=Tmp else begin CombineRgn(Rgn,Rgn,Tmp,RGN_OR); DeleteObject(Tmp); end; // TR
+  Tmp := CreatePolygonRgnEx([0,H, 0,Y2, X1,H]); if Rgn=0 then Rgn:=Tmp else begin CombineRgn(Rgn,Rgn,Tmp,RGN_OR); DeleteObject(Tmp); end; // BL
+  Tmp := CreatePolygonRgnEx([W,H, X2,H, W,Y2]); if Rgn=0 then Rgn:=Tmp else begin CombineRgn(Rgn,Rgn,Tmp,RGN_OR); DeleteObject(Tmp); end; // BR
+
+  try
+    with Display.Canvas do
+    begin
+      SelectClipRgn(Handle, Rgn);
+      BitBlt(Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+      SelectClipRgn(Handle, 0);
+    end;
+  finally
+    DeleteObject(Rgn);
+  end;
+end;
+
+// Effect201: Box In (Fixed: Reveals Center Box growing out)
+procedure Effect201(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+var
+  Rgn: HRGN;
+  cx, cy, Size: Integer;
+begin
+  if Progress > 98 then
+  begin
+    BitBlt(Display.Canvas.Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+    Exit;
+  end;
+
+  cx := W div 2;
+  cy := H div 2;
+  // Box grows from center
+  Size := MulDiv(Min(W,H), Progress, 100);
+
+  Rgn := CreateRectRgn(cx - Size, cy - Size, cx + Size, cy + Size);
+  try
+    with Display.Canvas do
+    begin
+      SelectClipRgn(Handle, Rgn);
+      BitBlt(Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+      SelectClipRgn(Handle, 0);
+    end;
+  finally
+    DeleteObject(Rgn);
+  end;
+end;
+
+// Effect202: Spiral Out
+procedure Effect202(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+var
+  pts: array[0..200] of TPoint;
+  i, cnt: Integer;
+  cx, cy: Integer;
+  a, r: Extended;
+  Rgn: HRGN;
+begin
+  if Progress > 98 then
+  begin
+    BitBlt(Display.Canvas.Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+    Exit;
+  end;
+
+  cx := W div 2;
+  cy := H div 2;
+  cnt := 0;
+  // Simple Archimedean spiral approximation for polygon
+  for i := 0 to 200 do
+  begin
+    a := (PI * 8 * i) / 200; // 4 full turns
+    r := (Max(W,H) / 2) * (i / 200);
+
+    pts[cnt].X := cx + Round(r * Cos(a));
+    pts[cnt].Y := cy + Round(r * Sin(a));
+    Inc(cnt);
+
+    // Stop if progress reached
+    if cnt > Round(Progress * 2) then Break;
+  end;
+
+  if cnt > 2 then
+  begin
+    Rgn := CreatePolygonRgn(pts, cnt, WINDING);
+    try
+      with Display.Canvas do
+      begin
+        SelectClipRgn(Handle, Rgn);
+        BitBlt(Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+        SelectClipRgn(Handle, 0);
+      end;
+    finally
+      DeleteObject(Rgn);
+    end;
+  end;
+end;
+
+// Effect203: Starburst (Classic 5 point star)
+procedure Effect203(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+var
+  pts: array[0..10] of TPoint;
+  i, cnt: Integer;
+  a, rOut, rIn, aRad: Extended;
+  cx, cy, Radius: Integer;
+  Rgn: HRGN;
+begin
+  if Progress > 98 then
+  begin
+    BitBlt(Display.Canvas.Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+    Exit;
+  end;
+
+  cx := W div 2;
+  cy := H div 2;
+  Radius := MulDiv(Max(W,H), Progress, 100);
+  rOut := Radius;
+  rIn := Radius / 2.5;
+  a := -PI / 2; // Start at top
+
+  cnt := 0;
+  for i := 0 to 10 do
+  begin
+    aRad := a;
+    if i mod 2 = 0 then
+      pts[cnt].X := cx + Round(rOut * Cos(aRad))
+    else
+      pts[cnt].X := cx + Round(rIn * Cos(aRad));
+
+    if i mod 2 = 0 then
+      pts[cnt].Y := cy + Round(rOut * Sin(aRad))
+    else
+      pts[cnt].Y := cy + Round(rIn * Sin(aRad));
+
+    a := a + PI / 5;
+    Inc(cnt);
+  end;
+
+  Rgn := CreatePolygonRgn(pts, 10, WINDING);
+  try
+    with Display.Canvas do
+    begin
+      SelectClipRgn(Handle, Rgn);
+      BitBlt(Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+      SelectClipRgn(Handle, 0);
+    end;
+  finally
+    DeleteObject(Rgn);
+  end;
+end;
+
+// Effect204: Horizontal Shredder (Fixed: Rubber/Jagged Reveal)
+procedure Effect204(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+var
+  Rgn, Tmp: HRGN;
+  StripWidth, i, MaxStrips: Integer;
+  YPos, RandY: Integer;
+  SavedRandSeed: Integer;
+begin
+  if Progress > 98 then
+  begin
+    BitBlt(Display.Canvas.Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+    Exit;
+  end;
+
+  SavedRandSeed := RandSeed;
+  RandSeed := Integer(Image.Handle);
+
+  StripWidth := 20;
+  MaxStrips := (W div StripWidth) + 1;
+  Rgn := 0;
+
+  for i := 0 to MaxStrips do
+  begin
+    // Base position of the "rubber"
+    YPos := MulDiv(H, Progress, 100);
+
+    // Add random jitter to simulate a shredded/rough edge
+    RandY := YPos + Random(StripWidth * 2) - StripWidth;
+
+    // Clamp to screen
+    if RandY < 0 then RandY := 0;
+    if RandY > H then RandY := H;
+
+    // Create a strip from top down to the jagged Y position
+    Tmp := CreateRectRgn(i * StripWidth, 0, (i+1) * StripWidth, RandY);
+
+    if Rgn = 0 then Rgn := Tmp
+    else
+    begin
+      CombineRgn(Rgn, Rgn, Tmp, RGN_OR);
+      DeleteObject(Tmp);
+    end;
+  end;
+
+  RandSeed := SavedRandSeed;
+
+  try
+    with Display.Canvas do
+    begin
+      SelectClipRgn(Handle, Rgn);
+      BitBlt(Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+      SelectClipRgn(Handle, 0);
+    end;
+  finally
+    DeleteObject(Rgn);
+  end;
+end;
+
+// Effect205: Vertical Shredder (Fixed: Rubber/Jagged Reveal)
+procedure Effect205(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+var
+  Rgn, Tmp: HRGN;
+  StripHeight, i, MaxStrips: Integer;
+  XPos, RandX: Integer;
+  SavedRandSeed: Integer;
+begin
+  if Progress > 98 then
+  begin
+    BitBlt(Display.Canvas.Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+    Exit;
+  end;
+
+  SavedRandSeed := RandSeed;
+  RandSeed := Integer(Image.Handle);
+
+  StripHeight := 20;
+  MaxStrips := (H div StripHeight) + 1;
+  Rgn := 0;
+
+  for i := 0 to MaxStrips do
+  begin
+    XPos := MulDiv(W, Progress, 100);
+    RandX := XPos + Random(StripHeight * 2) - StripHeight;
+
+    if RandX < 0 then RandX := 0;
+    if RandX > W then RandX := W;
+
+    Tmp := CreateRectRgn(0, i * StripHeight, RandX, (i+1) * StripHeight);
+
+    if Rgn = 0 then Rgn := Tmp
+    else
+    begin
+      CombineRgn(Rgn, Rgn, Tmp, RGN_OR);
+      DeleteObject(Tmp);
+    end;
+  end;
+
+  RandSeed := SavedRandSeed;
+
+  try
+    with Display.Canvas do
+    begin
+      SelectClipRgn(Handle, Rgn);
+      BitBlt(Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+      SelectClipRgn(Handle, 0);
+    end;
+  finally
+    DeleteObject(Rgn);
+  end;
+end;
+
+// Effect206: Grid Expansion (Fixed: Grid actually grows from center)
+procedure Effect206(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+var
+  Rgn, Tmp: HRGN;
+  cx, cy, Dist, MaxDist: Integer;
+  i: Integer;
+begin
+  if Progress > 98 then
+  begin
+    BitBlt(Display.Canvas.Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+    Exit;
+  end;
+
+  cx := W div 2;
+  cy := H div 2;
+  MaxDist := Round(Sqrt(W*W + H*H) / 2);
+  Dist := MulDiv(MaxDist, Progress, 100);
+
+  Rgn := 0;
+
+  // Draw Vertical lines expanding out from center
+  i := cx - Dist;
+  // Ensure we start near center and go out
+  if i > cx then i := cx;
+  if (i mod 20) <> 0 then i := i - (i mod 20); // Align to grid
+
+  while i <= (cx + Dist) do
+  begin
+    if (i >= 0) and (i <= W) then
+    begin
+      Tmp := CreateRectRgn(i - 1, 0, i + 1, H);
+      if Rgn = 0 then Rgn := Tmp
+      else
+      begin
+        CombineRgn(Rgn, Rgn, Tmp, RGN_OR);
+        DeleteObject(Tmp);
+      end;
+    end;
+    i := i + 20; // Grid spacing
+  end;
+
+  // Draw Horizontal lines expanding out from center
+  i := cy - Dist;
+  if i > cy then i := cy;
+  if (i mod 20) <> 0 then i := i - (i mod 20);
+
+  while i <= (cy + Dist) do
+  begin
+    if (i >= 0) and (i <= H) then
+    begin
+      Tmp := CreateRectRgn(0, i - 1, W, i + 1);
+      if Rgn = 0 then Rgn := Tmp
+      else
+      begin
+        CombineRgn(Rgn, Rgn, Tmp, RGN_OR);
+        DeleteObject(Tmp);
+      end;
+    end;
+    i := i + 20;
+  end;
+
+  try
+    with Display.Canvas do
+    begin
+      SelectClipRgn(Handle, Rgn);
+      BitBlt(Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+      SelectClipRgn(Handle, 0);
+    end;
+  finally
+    DeleteObject(Rgn);
+  end;
+end;
+
+
+// Effect207: Thick Diagonal Wipe (Fixed: Reveals top-left area)
+procedure Effect207(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+var
+  Rgn: HRGN;
+  Offset: Integer;
+  pts: array[0..3] of TPoint;
+begin
+  if Progress > 98 then
+  begin
+    BitBlt(Display.Canvas.Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+    Exit;
+  end;
+
+  Offset := MulDiv(W + H, Progress, 100);
+  if Offset = 0 then Offset := 1;
+
+  // Define polygon: Top-Left corner and the diagonal line
+  pts[0].X := 0; pts[0].Y := 0;
+  pts[1].X := Offset; pts[1].Y := 0;
+  pts[2].X := Offset; pts[2].Y := H;
+  pts[3].X := 0; pts[3].Y := H;
+
+  Rgn := CreatePolygonRgn(pts, 4, WINDING);
+  try
+    with Display.Canvas do
+    begin
+      SelectClipRgn(Handle, Rgn);
+      BitBlt(Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+      SelectClipRgn(Handle, 0);
+    end;
+  finally
+    DeleteObject(Rgn);
+  end;
+end;
+
+// Effect208: Box Iris (Rounded Square from center)
+procedure Effect208(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+var
+  Rgn: HRGN;
+  cx, cy, Size: Integer;
+begin
+  if Progress > 98 then
+  begin
+    BitBlt(Display.Canvas.Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+    Exit;
+  end;
+
+  cx := W div 2;
+  cy := H div 2;
+  Size := MulDiv(Min(W,H), Progress, 100);
+
+  Rgn := CreateRoundRectRgn(cx - Size, cy - Size, cx + Size, cy + Size, 30, 30);
+  try
+    with Display.Canvas do
+    begin
+      SelectClipRgn(Handle, Rgn);
+      BitBlt(Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+      SelectClipRgn(Handle, 0);
+    end;
+  finally
+    DeleteObject(Rgn);
+  end;
+end;
+
+// Effect209: Waterfall (Columns falling)
+procedure Effect209(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+var
+  Rgn, Tmp: HRGN;
+  ColWidth, i, MaxCols: Integer;
+  DropDist: Integer;
+begin
+  if Progress > 98 then
+  begin
+    BitBlt(Display.Canvas.Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+    Exit;
+  end;
+
+  ColWidth := 20;
+  MaxCols := (W div ColWidth) + 1;
+  DropDist := MulDiv(H, Progress, 100);
+  Rgn := 0;
+
+  for i := 0 to MaxCols do
+  begin
+    // Staggered start based on column index to create wave
+    Tmp := CreateRectRgn(i * ColWidth, 0, (i+1) * ColWidth, DropDist + (i mod 2) * (ColWidth*2));
+    if Rgn = 0 then Rgn := Tmp
+    else
+    begin
+      CombineRgn(Rgn, Rgn, Tmp, RGN_OR);
+      DeleteObject(Tmp);
+    end;
+  end;
+
+  try
+    with Display.Canvas do
+    begin
+      SelectClipRgn(Handle, Rgn);
+      BitBlt(Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+      SelectClipRgn(Handle, 0);
+    end;
+  finally
+    DeleteObject(Rgn);
+  end;
+end;
+
+// Effect210: Laser Scan (Fixed: Now a "Sawtooth" laser cutter - ZigZag edge)
+procedure Effect210(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+var
+  Rgn: HRGN;
+  ix, YPos: Integer;
+  pts: array[0..300] of TPoint;
+  PtsCount: Integer;
+begin
+  if Progress > 98 then
+  begin
+    BitBlt(Display.Canvas.Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+    Exit;
+  end;
+
+  YPos := MulDiv(H, Progress, 100);
+  PtsCount := 0;
+
+  // Build a shape that looks like a jagged laser beam
+  // Top Left -> Top Right -> Bottom Right (ZigZag) -> Bottom Left -> Close
+
+  pts[PtsCount].X := 0; pts[PtsCount].Y := 0; Inc(PtsCount);
+  pts[PtsCount].X := W; pts[PtsCount].Y := 0; Inc(PtsCount);
+  pts[PtsCount].X := W; pts[PtsCount].Y := YPos; Inc(PtsCount);
+
+  // Create the jagged bottom edge
+  ix := W - 20;
+  while ix >= 0 do
+  begin
+    // ZigZag pattern: Every 20px, jump up or down slightly
+    if (ix div 20) mod 2 = 0 then
+      pts[PtsCount].Y := YPos - 10 // Up
+    else
+      pts[PtsCount].Y := YPos + 20; // Down (Beam thickness)
+
+    pts[PtsCount].X := ix;
+    Inc(PtsCount);
+    if PtsCount > High(pts) then Break;
+    ix := ix - 20;
+  end;
+
+  Rgn := CreatePolygonRgn(pts, PtsCount, WINDING);
+  try
+    with Display.Canvas do
+    begin
+      SelectClipRgn(Handle, Rgn);
+      BitBlt(Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+      SelectClipRgn(Handle, 0);
+    end;
+  finally
+    DeleteObject(Rgn);
+  end;
+end;
+
+// Effect211: Wave (Fixed: Rebuilt polygon logic for proper fill)
+procedure Effect211(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+var
+  Rgn: HRGN;
+  ix, BaseY: Integer;
+  // Fixed size array to avoid memory alloc issues in D7
+  pts: array[0..300] of TPoint;
+  PtsCount: Integer;
+begin
+  if Progress > 98 then
+  begin
+    BitBlt(Display.Canvas.Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+    Exit;
+  end;
+
+  BaseY := Round((Progress/100) * H);
+  PtsCount := 0;
+
+  // 1. Top Left
+  pts[PtsCount].X := 0; pts[PtsCount].Y := 0; Inc(PtsCount);
+  // 2. Top Right
+  pts[PtsCount].X := W; pts[PtsCount].Y := 0; Inc(PtsCount);
+  // 3. Bottom Right (at base height)
+  pts[PtsCount].X := W; pts[PtsCount].Y := BaseY; Inc(PtsCount);
+
+  // 4. Wave path going Left
+  ix := W - 10;
+  // Loop must be manual, Delphi 7 has no 'step' keyword
+  while ix >= 0 do
+  begin
+    pts[PtsCount].X := ix;
+    // Calculate Y with Sine wave
+    pts[PtsCount].Y := Round(BaseY + (Sin(ix * 0.05) * 30));
+
+    // Clamp Y to prevent invalid polygons
+    if pts[PtsCount].Y < 0 then pts[PtsCount].Y := 0;
+    if pts[PtsCount].Y > H then pts[PtsCount].Y := H;
+
+    Inc(PtsCount);
+    if PtsCount > High(pts) then Break; // Safety
+    ix := ix - 10;
+  end;
+
+  Rgn := CreatePolygonRgn(pts, PtsCount, WINDING);
+  try
+    with Display.Canvas do
+    begin
+      SelectClipRgn(Handle, Rgn);
+      BitBlt(Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+      SelectClipRgn(Handle, 0);
+    end;
+  finally
+    DeleteObject(Rgn);
+  end;
+end;
+
+// Effect212: Random Mosaic (Small squares)
+procedure Effect212(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+var
+  GridSize, cX, cY: Integer;
+  Rgn, Tmp: HRGN;
+  TotalCells, CellsToReveal: Integer;
+begin
+  if Progress > 98 then
+  begin
+    BitBlt(Display.Canvas.Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+    Exit;
+  end;
+
+  GridSize := 30;
+  Rgn := 0;
+  TotalCells := ((W div GridSize) + 1) * ((H div GridSize) + 1);
+  CellsToReveal := MulDiv(TotalCells, Progress, 100);
+
+  for cX := 0 to (W div GridSize) + 1 do
+    for cY := 0 to (H div GridSize) + 1 do
+      if ((cX + cY) mod 3 = 0) and (CellsToReveal > 0) then
+      begin
+        Tmp := CreateRectRgn(cX * GridSize, cY * GridSize, (cX+1)*GridSize, (cY+1)*GridSize);
+        if Rgn = 0 then Rgn := Tmp
+        else
+        begin
+          CombineRgn(Rgn, Rgn, Tmp, RGN_OR);
+          DeleteObject(Tmp);
+        end;
+        Dec(CellsToReveal);
+      end;
+
+  try
+    with Display.Canvas do
+    begin
+      SelectClipRgn(Handle, Rgn);
+      BitBlt(Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+      SelectClipRgn(Handle, 0);
+    end;
+  finally
+    DeleteObject(Rgn);
+  end;
+end;
+
+// Effect213: Corner Slide (Image slides in from corners)
+procedure Effect213(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+var
+  Rgn, Tmp: HRGN;
+  XPos, YPos: Integer;
+begin
+  if Progress > 98 then
+  begin
+    BitBlt(Display.Canvas.Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+    Exit;
+  end;
+
+  XPos := MulDiv(W, Progress, 100);
+  YPos := MulDiv(H, Progress, 100);
+
+  Rgn := 0;
+  // TL Corner
+  Tmp := CreateRectRgn(0, 0, XPos, YPos);
+  if Rgn = 0 then Rgn := Tmp else begin CombineRgn(Rgn,Rgn,Tmp,RGN_OR); DeleteObject(Tmp); end;
+  // BR Corner
+  Tmp := CreateRectRgn(W-XPos, H-YPos, W, H);
+  if Rgn = 0 then Rgn := Tmp else begin CombineRgn(Rgn,Rgn,Tmp,RGN_OR); DeleteObject(Tmp); end;
+
+  try
+    with Display.Canvas do
+    begin
+      SelectClipRgn(Handle, Rgn);
+      BitBlt(Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+      SelectClipRgn(Handle, 0);
+    end;
+  finally
+    DeleteObject(Rgn);
+  end;
+end;
+
+// Effect214: Circle Pulse (Alternating rings)
+procedure Effect214(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+var
+  cx, cy, r, MaxR: Integer;
+  Rgn, Tmp: HRGN;
+  i: Integer;
+begin
+  if Progress > 98 then
+  begin
+    BitBlt(Display.Canvas.Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+    Exit;
+  end;
+
+  cx := W div 2;
+  cy := H div 2;
+  MaxR := MulDiv(Max(W,H), Progress, 100);
+  Rgn := 0;
+
+  // Draw concentric circles
+  i := 0;
+  while i < MaxR do
+  begin
+    if (i div 20) mod 2 = 0 then
+    begin
+      Tmp := CreateEllipticRgn(cx - i, cy - i, cx + i, cy + i);
+      if Rgn = 0 then Rgn := Tmp
+      else
+      begin
+        CombineRgn(Rgn, Rgn, Tmp, RGN_OR);
+        DeleteObject(Tmp);
+      end;
+    end;
+    Inc(i, 5);
+  end;
+
+  try
+    with Display.Canvas do
+    begin
+      SelectClipRgn(Handle, Rgn);
+      BitBlt(Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+      SelectClipRgn(Handle, 0);
+    end;
+  finally
+    DeleteObject(Rgn);
+  end;
+end;
+
+// Effect215: Vertical Block Slide (Fixed: Reveal whole columns)
+procedure Effect215(Display, Image: TBitmap; W, H, X, Y, Progress: Integer);
+var
+  Rgn, Tmp: HRGN;
+  ColWidth, i, MaxCols: Integer;
+  YPos, RandY: Integer;
+begin
+  if Progress > 98 then
+  begin
+    BitBlt(Display.Canvas.Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+    Exit;
+  end;
+
+  ColWidth := 30;
+  MaxCols := (W div ColWidth) + 1;
+  YPos := MulDiv(H, Progress, 100);
+  Rgn := 0;
+
+  for i := 0 to MaxCols do
+  begin
+    // Create a randomized Y offset for the bottom of this column
+    // This makes it look like "blocks" sliding, but fills the whole column from top
+    if (i mod 2 = 0) then
+      RandY := Random(ColWidth)
+    else
+      RandY := -Random(ColWidth);
+
+    Tmp := CreateRectRgn(i * ColWidth, 0, (i+1) * ColWidth, YPos + RandY);
+    if Rgn = 0 then Rgn := Tmp
+    else
+    begin
+      CombineRgn(Rgn, Rgn, Tmp, RGN_OR);
+      DeleteObject(Tmp);
+    end;
+  end;
+
+  try
+    with Display.Canvas do
+    begin
+      SelectClipRgn(Handle, Rgn);
+      BitBlt(Handle, 0, 0, W, H, Image.Canvas.Handle, 0, 0, SRCCOPY);
+      SelectClipRgn(Handle, 0);
+    end;
+  finally
+    DeleteObject(Rgn);
+  end;
+end;
+
+
 
 
 
