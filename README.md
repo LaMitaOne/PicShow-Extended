@@ -2,6 +2,9 @@
 Extended version of the popular Delphi PicShow component with a total of 215 transition effects (original had 176).     
         
 ## About This Project    
+
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/LaMitaOne/PicShow-Extended)
+   
     
 This library is based on **PicShow 4.20** by Mohammad Hossein Daneshpajouh (DelphiArea).    
     
